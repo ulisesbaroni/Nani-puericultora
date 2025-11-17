@@ -1,0 +1,23 @@
+// Variables
+@use "../utilities/variables" as *;
+
+// Mixin
+@use "../utilities/mixin" as *;
+
+/* Pag Servicios */
+/* Tarjetas de servicios */
+.services {
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 0;
+    }
+
+    li {
+      background: #ffe5e0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  }

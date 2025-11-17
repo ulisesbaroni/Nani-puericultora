@@ -1,0 +1,35 @@
+// Variables
+@use "../utilities/variables" as *;
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header y nav */
+header {
+  background: #ffb6b9;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  nav .navbar-brand {
+    color: #fffdfe;
+    font-weight: bold;
+  }
+}
+
+/* footer */
+footer {
+  background: #ffb6b9;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  color: #fff;
+}

@@ -1,37 +1,27 @@
-/* Reset básico */
+@charset "UTF-8";
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #fffaf8;
-  color: #333;
-}
-
-/* Header y Barra de navegación */
+/* header y nav */
 header {
   background: #ffb6b9;
   padding: 20px;
   text-align: center;
 }
-
 header h1 {
   font-size: 2rem;
   color: #fff;
 }
-
-
-nav .navbar-brand {
+header nav .navbar-brand {
   color: #fffdfe;
   font-weight: bold;
 }
 
-/* Footer */
+/* footer */
 footer {
   background: #ffb6b9;
   text-align: center;
@@ -40,22 +30,18 @@ footer {
   color: #fff;
 }
 
-
-/* Estilos home/index */
+/* Home */
 /* Secciones principales */
 section {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
 }
-
 section h2 {
   color: #ff6f61;
   margin-bottom: 20px;
 }
-
-/* img principal */
-.img-principal {
+section .img-principal {
   display: block;
   margin: 30px auto;
   max-width: 80%;
@@ -64,29 +50,12 @@ section h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos pag Servicios */
-/* Sección de servicios */
-.services ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  padding: 0;
-}
-
-.services li {
-  background: #ffe5e0;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-/* Estilos pag Contacto */
-/* Formulario de contacto */
+/* Pag de contacto*/
+/* Formulario */
 form {
   display: flex;
   flex-direction: column;
 }
-
 form input,
 form textarea {
   margin-bottom: 10px;
@@ -94,7 +63,6 @@ form textarea {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
-
 form button {
   background: #ff6f61;
   color: #fff;
@@ -103,29 +71,32 @@ form button {
   border-radius: 5px;
   cursor: pointer;
 }
-
 form button:hover {
   background: #e65b50;
 }
 
-
-/*Sección MQ */
-/* Media query contacto */
-/* Maps */
-@media (max-width: 767px) {
-  .maps {
-    padding: 0 15px;
-  }
-
-  .maps iframe {
-    width: 100%;
-    height: 250px;
-  }
+/* mapa de ubicación */
+.maps {
+  padding: 0 15px;
+}
+.maps iframe {
+  width: 100%;
+  height: 250px;
 }
 
-/* Media query servicios */
-@media (min-width: 600px) {
-  .services ul {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+/* Pag Servicios */
+/* Tarjetas de servicios */
+.services ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 0;
 }
+.services li {
+  background: #ffe5e0;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

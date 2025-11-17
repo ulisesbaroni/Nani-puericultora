@@ -1,0 +1,21 @@
+// Variables
+@use "../utilities/variables" as *;
+
+// Mixin
+@use "../utilities/mixin" as *;
+
+/* mq de pag contacto */
+/* mapa de ubicación */
+@media (min-width: 768px) {
+  .maps iframe {
+    height: 350px;
+  }
+}
+
+/* mq de pag servicios */
+/* tarjetas de servicios */
+@media (min-width: 600px) {
+  .services ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
