@@ -1,21 +1,49 @@
-// Variables
-@use "../utilities/variables" as *;
-
-// Mixin
-@use "../utilities/mixin" as *;
+/* mq home */
+@media (min-width: 768px) {
+  .about {
+    h2 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
 
 /* mq de pag contacto */
-/* mapa de ubicación */
 @media (min-width: 768px) {
-  .maps iframe {
-    height: 350px;
+  /* Formulario */
+  .contact {
+    h2 {
+      text-align: left;
+    }
+  }
+
+  /* mapa de ubicación */
+  .maps {
+    h2 {
+      text-align: left;
+    }
+    iframe {
+      height: 350px;
+    }
   }
 }
 
 /* mq de pag servicios */
-/* tarjetas de servicios */
-@media (min-width: 600px) {
-  .services ul {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+@media (min-width: 768px) {
+  /* tarjetas de servicios */
+  .services {
+    h2 {
+      text-align: left;
+    }
+
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    li {
+       text-align: left;
+    }
   }
 }

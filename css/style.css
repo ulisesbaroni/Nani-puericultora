@@ -13,12 +13,18 @@ header {
   text-align: center;
 }
 header h1 {
-  font-size: 2rem;
-  color: #fff;
+  font-family: "fontTitle";
+  font-size: 3rem;
+  font-weight: bolder;
 }
-header nav .navbar-brand {
-  color: #fffdfe;
+header .nav-link {
+  font-family: "fontPrimary";
+  color: white;
+  font-size: 1.5rem;
   font-weight: bold;
+}
+header .nav-link:hover {
+  color: #fff;
 }
 
 /* footer */
@@ -30,18 +36,30 @@ footer {
   color: #fff;
 }
 
+@font-face {
+  font-family: "fontTitle";
+  src: url("../../fonts/Amatic-Bold.ttf");
+}
+@font-face {
+  font-family: "fontPrimary";
+  src: url("../../fonts/AmaticSC-Regular.ttf");
+  color: #fff;
+}
 /* Home */
 /* Secciones principales */
-section {
+.about {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
 }
-section h2 {
+.about h2 {
+  font-family: "fontPrimary";
+  text-align: center;
   color: #ff6f61;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bolder;
 }
-section .img-principal {
+.about .img-principal {
   display: block;
   margin: 30px auto;
   max-width: 80%;
@@ -49,21 +67,39 @@ section .img-principal {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.about p {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 22px;
+  color: rgb(165, 124, 124);
+}
 
 /* Pag de contacto*/
 /* Formulario */
-form {
+.contact {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.contact h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.contact form {
   display: flex;
   flex-direction: column;
 }
-form input,
-form textarea {
+.contact form input,
+.contact form textarea {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
-form button {
+.contact form button {
   background: #ff6f61;
   color: #fff;
   padding: 10px;
@@ -71,11 +107,23 @@ form button {
   border-radius: 5px;
   cursor: pointer;
 }
-form button:hover {
+.contact form button:hover {
   background: #e65b50;
 }
 
 /* mapa de ubicación */
+.maps {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.maps h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 3rem;
+  font-weight: bolder;
+}
 .maps {
   padding: 0 15px;
 }
@@ -86,6 +134,18 @@ form button:hover {
 
 /* Pag Servicios */
 /* Tarjetas de servicios */
+.services {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.services h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 3rem;
+  font-weight: bolder;
+}
 .services ul {
   list-style: none;
   display: grid;
@@ -94,9 +154,62 @@ form button:hover {
   padding: 0;
 }
 .services li {
+  text-align: center;
+  font-weight: bolder;
   background: #ffe5e0;
   padding: 15px;
   border-radius: 8px;
+}
+.services p {
+  font-weight: lighter;
+}
+
+/* mq para pag de contacto */
+@media (min-width: 1024px) {
+  /* mapa de ubicación */
+  .maps {
+    padding: 0;
+  }
+  .maps iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+/* mq home */
+@media (min-width: 768px) {
+  .about h2 {
+    text-align: left;
+  }
+  .about p {
+    text-align: left;
+  }
+}
+/* mq de pag contacto */
+@media (min-width: 768px) {
+  /* Formulario */
+  .contact h2 {
+    text-align: left;
+  }
+  /* mapa de ubicación */
+  .maps h2 {
+    text-align: left;
+  }
+  .maps iframe {
+    height: 350px;
+  }
+}
+/* mq de pag servicios */
+@media (min-width: 768px) {
+  /* tarjetas de servicios */
+  .services h2 {
+    text-align: left;
+  }
+  .services ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .services li {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

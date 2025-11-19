@@ -1,0 +1,17 @@
+// Variables
+@use "../utilities/variables" as *;
+
+//Sin parametros
+@mixin section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+@mixin estilos-h2{
+    font-family: $fuente-primaria;
+    text-align: center;
+    color: #ff6f61;
+    font-size: 3rem;
+    font-weight: bolder;
+}

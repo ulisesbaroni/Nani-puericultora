@@ -1,12 +1,7 @@
-// Variables
-@use "../utilities/variables" as *;
-
-// Mixin
-@use "../utilities/mixin" as *;
-
 /* mq para pag de contacto */
-/* mapa de ubicación */
 @media (min-width: 1024px) {
+ 
+/* mapa de ubicación */
   .maps {
     padding: 0;
     

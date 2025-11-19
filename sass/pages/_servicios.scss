@@ -1,23 +1,38 @@
+//Reset
+@use "../base/estilos-generales" as *;
+//Fuentes
+@use "../base/fonts" as *;
 // Variables
 @use "../utilities/variables" as *;
-
 // Mixin
 @use "../utilities/mixin" as *;
 
 /* Pag Servicios */
 /* Tarjetas de servicios */
 .services {
-    ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      padding: 0;
-    }
+  @include section;
 
-    li {
-      background: #ffe5e0;
-      padding: 15px;
-      border-radius: 8px;
-    }
+  h2 {
+    @include estilos-h2;
   }
+  
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0;
+  }
+
+  li {
+    text-align: center;
+    font-weight: bolder;
+    background: #ffe5e0;
+    padding: 15px;
+    border-radius: 8px;
+    
+  }
+  p {
+    font-weight: lighter;
+  }
+}

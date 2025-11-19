@@ -1,21 +1,21 @@
+//Reset
+@use "../base/estilos-generales" as *;
+//Fuentes
+@use "../base/fonts" as *;
 // Variables
 @use "../utilities/variables" as *;
-
 // Mixin
 @use "../utilities/mixin" as *;
 
 /* Home */
 /* Secciones principales */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+.about {
+  @include section;
 
   h2 {
-    color: #ff6f61;
-    margin-bottom: 20px;
+    @include estilos-h2;
   }
-
+  
   .img-principal {
     display: block;
     margin: 30px auto;
@@ -23,5 +23,11 @@ section {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  p {
+    font-family:sans-serif;
+    text-align: center;
+    font-size: 22px;
+    color:rgb(165, 124, 124);
   }
 }

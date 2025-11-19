@@ -1,6 +1,15 @@
 //Reset
 @use "base/estilos-generales" as *;
 
+//Fuentes
+@use "base/fonts" as *;
+
+// Variables
+@use "utilities/variables" as *;
+
+//Mixin
+@use "utilities/mixin" as *;
+
 //Home
 @use "pages/home" as *;
 
@@ -9,3 +18,9 @@
 
 //servicios
 @use "pages/servicios" as *;
+
+//MQ desktop
+@use "layout/mq_desktop" as *;
+
+//MQ desktop
+@use "layout/mq_tablet" as *;

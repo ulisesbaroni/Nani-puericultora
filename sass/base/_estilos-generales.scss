@@ -15,13 +15,21 @@ header {
   text-align: center;
 
   h1 {
-    font-size: 2rem;
-    color: #fff;
+    font-family: $fuente-titulo;
+    font-size: 3rem;
+    font-weight: bolder;
   }
 
-  nav .navbar-brand {
-    color: #fffdfe;
-    font-weight: bold;
+  .nav-link{
+    font-family: $fuente-primaria;
+    color:white;
+    font-size: 1.5rem;
+    font-weight:bold;
+  
+    &:hover{
+      color:#fff;
+    }
+   
   }
 }
 
