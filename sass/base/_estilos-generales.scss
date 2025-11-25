@@ -9,6 +9,7 @@
 }
 
 /* header y nav */
+
 header {
   background: #ffb6b9;
   padding: 20px;
@@ -18,6 +19,13 @@ header {
     font-family: $fuente-titulo;
     font-size: 3rem;
     font-weight: bolder;
+  }
+
+  h3{
+    font-family: $fuente-primaria;
+    font-size: 25px;
+    margin-left: 4rem;
+    margin-top: 0;
   }
 
   .nav-link{
