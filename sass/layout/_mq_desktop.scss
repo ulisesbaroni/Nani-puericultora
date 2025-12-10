@@ -1,6 +1,34 @@
+/* mq home */
+@media (min-width: 768px) {
+  /* Sección faq */
+  .faq .faq__item {
+    position: relative;
+
+    .faq__answer {
+      position: absolute;
+      top: 2.2rem;
+      left: 0;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+      z-index: 5;
+    }
+
+    &:hover .faq__answer {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+  }
+}
+
 /* mq para pag de contacto */
 @media (min-width: 1024px) {
- 
 /* mapa de ubicación */
   .maps {
     padding: 0;

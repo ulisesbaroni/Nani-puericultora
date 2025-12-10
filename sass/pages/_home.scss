@@ -9,8 +9,13 @@
 
 /* Home */
 /* Secciones principales */
+.bg-about {
+  background-image: url("../img/Fondo-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 .about {
-
   @include section;
 
   .img-principal {
@@ -24,16 +29,12 @@
 
   h2 {
     @include estilos-h2;
-    animation: backInRight;
-    animation-duration: 2s;
+    animation-duration: 3s;
   }
 
   p {
-    font-family: $fuente-primaria;
-    font-weight:600;
-    text-align: center;
+    @include parrafos;
     font-size: 22px;
-    color: rgb(165, 124, 124);
   }
 
   .boton-sobre-mi {
@@ -48,3 +49,250 @@
     }
   }
 }
+.why {
+  @include section;
+
+  h2 {
+    @include estilos-h2;
+    font-size: 25px;
+    padding-bottom: 1em;
+  }
+
+  p {
+    @include parrafos;
+    font-weight: lighter;
+    font-size: 18px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+// Sección Servicios
+.services-home {
+  background-color: #f7f3e8;
+  h2 {
+    @include estilos-h2;
+    padding-top: 2em;
+    color: rgb(165, 124, 124);
+  }
+
+  span {
+    color: #ff6f61;
+    font-weight: bolder;
+  }
+
+  .cards-container {
+    @include section;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+
+    .card {
+      width: 100%;
+      max-width: 330px;
+      height: 400px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      .content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 15px 18px;
+        background: rgba(148, 99, 94, 0.65);
+        color: #fff;
+        font-family: $fuente-primaria;
+        text-align: center;
+        transition: 0.4s ease;
+        z-index: 3;
+
+        h3 {
+          margin: 0;
+          font-size: 1.3rem;
+        }
+
+        p {
+          margin-top: 10px;
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: 0.4s ease;
+          font-size: 0.95rem;
+          line-height: 1.4;
+        }
+      }
+
+      button {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 12px 20px;
+        border: none;
+        background: white;
+        color: #ff6f61;
+        font-family: $fuente-primaria;
+        font-weight: bold;
+        opacity: 0;
+        transition: 0.4s ease;
+        z-index: 2;
+        font-size: 1rem;
+      }
+
+      &:hover {
+        .content {
+          transform: translateY(-100px);
+        }
+
+        .content p {
+          opacity: 1;
+          max-height: 180px;
+        }
+
+        button {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+// Sección Preguntas frecuentes
+.faq {
+  @include section;
+
+  h2 {
+    @include estilos-h2;
+    margin-bottom: 2rem;
+  }
+
+  .faq__item {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+
+    .faq__question {
+      font-family: $fuente-primaria;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ff6f61;
+      cursor: pointer;
+      position: relative;
+
+    }
+
+    .faq__answer {
+      font-family: $fuente-primaria;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: rgb(165, 124, 124);
+      margin-top: .8rem;
+
+      /* Mobile-first: SIEMPRE visible y estático */
+      position: static;
+      opacity: 1;
+    }
+  }
+}
+// Sección Testimonios
+.testimonios {
+  @include section;
+  text-align: center;
+
+  h2 {
+    @include estilos-h2;
+    margin-bottom: 2rem;
+  }
+
+  .testimonios-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonio {
+    background: #ffe8e8;
+    padding: 1.8rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .texto {
+      font-family: $fuente-primaria;
+      font-size: 1.2rem;
+      color: rgb(145, 100, 100);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .nombre {
+      font-family: $fuente-titulo;
+      font-size: 1.6rem;
+      color: #ff6f61;
+    }
+  }
+}
+// Sección consulta
+.cta-wrapper {
+  background: #e4c6bf;
+  padding: 0;
+
+  .cta {
+  @include section;
+  text-align: center;
+
+  .cta-content {
+    padding: 2rem;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+
+     h2 {
+    @include estilos-h2;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-text {
+    @include parrafos;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgb(145, 100, 100);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: #ff6f61;
+    color: #fff;
+    font-family: $fuente-primaria;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.9rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #e85b52;
+      transform: translateY(-3px);
+    }
+  }
+  }
+}
+
+}
+
+
+

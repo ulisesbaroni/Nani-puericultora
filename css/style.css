@@ -48,10 +48,17 @@ footer {
 }
 @font-face {
   font-family: "fontPrimary";
-  src: url("../fonts/AmaticSC-Regular.ttf");
+  src: url("../fonts/JosefinSlab-Light.ttf");
 }
 /* Home */
 /* Secciones principales */
+.bg-about {
+  background-image: url("../img/Fondo-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .about {
   padding: 40px 20px;
   max-width: 900px;
@@ -71,15 +78,14 @@ footer {
   color: #ff6f61;
   font-size: 2rem;
   font-weight: bolder;
-  animation: backInRight;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 .about p {
   font-family: "fontPrimary";
   font-weight: 600;
   text-align: center;
-  font-size: 22px;
   color: rgb(165, 124, 124);
+  font-size: 22px;
 }
 .about .boton-sobre-mi {
   display: flex;
@@ -88,6 +94,253 @@ footer {
 .about .boton-sobre-mi button:hover {
   background-color: #ffb6b9;
   border-color: white;
+}
+
+.why {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.why h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-size: 25px;
+  padding-bottom: 1em;
+}
+.why p {
+  font-family: "fontPrimary";
+  font-weight: 600;
+  text-align: center;
+  color: rgb(165, 124, 124);
+  font-weight: lighter;
+  font-size: 18px;
+}
+.why p span {
+  font-weight: bold;
+}
+
+.services-home {
+  background-color: #f7f3e8;
+}
+.services-home h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-top: 2em;
+  color: rgb(165, 124, 124);
+}
+.services-home span {
+  color: #ff6f61;
+  font-weight: bolder;
+}
+.services-home .cards-container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+.services-home .cards-container .card {
+  width: 100%;
+  max-width: 330px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.services-home .cards-container .card .content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 18px;
+  background: rgba(148, 99, 94, 0.65);
+  color: #fff;
+  font-family: "fontPrimary";
+  text-align: center;
+  transition: 0.4s ease;
+  z-index: 3;
+}
+.services-home .cards-container .card .content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+.services-home .cards-container .card .content p {
+  margin-top: 10px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.services-home .cards-container .card button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background: white;
+  color: #ff6f61;
+  font-family: "fontPrimary";
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 2;
+  font-size: 1rem;
+}
+.services-home .cards-container .card:hover .content {
+  transform: translateY(-100px);
+}
+.services-home .cards-container .card:hover .content p {
+  opacity: 1;
+  max-height: 180px;
+}
+.services-home .cards-container .card:hover button {
+  opacity: 1;
+}
+
+.faq {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.faq h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+.faq .faq__item {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.faq .faq__item .faq__question {
+  font-family: "fontPrimary";
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6f61;
+  cursor: pointer;
+  position: relative;
+}
+.faq .faq__item .faq__answer {
+  font-family: "fontPrimary";
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgb(165, 124, 124);
+  margin-top: 0.8rem;
+  /* Mobile-first: SIEMPRE visible y estático */
+  position: static;
+  opacity: 1;
+}
+
+.testimonios {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.testimonios h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+.testimonios .testimonios-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.testimonios .testimonio {
+  background: #ffe8e8;
+  padding: 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonios .testimonio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.testimonios .testimonio .texto {
+  font-family: "fontPrimary";
+  font-size: 1.2rem;
+  color: rgb(145, 100, 100);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.testimonios .testimonio .nombre {
+  font-family: "fontTitle";
+  font-size: 1.6rem;
+  color: #ff6f61;
+}
+
+.cta-wrapper {
+  background: #e4c6bf;
+  padding: 0;
+}
+.cta-wrapper .cta {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.cta-wrapper .cta .cta-content {
+  padding: 2rem;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+.cta-wrapper .cta .cta-content h2 {
+  font-family: "fontPrimary";
+  text-align: center;
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+}
+.cta-wrapper .cta .cta-content .cta-text {
+  font-family: "fontPrimary";
+  font-weight: 600;
+  text-align: center;
+  color: rgb(165, 124, 124);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgb(145, 100, 100);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.cta-wrapper .cta .cta-content .cta-btn {
+  display: inline-block;
+  background: #ff6f61;
+  color: #fff;
+  font-family: "fontPrimary";
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.cta-wrapper .cta .cta-content .cta-btn:hover {
+  background: #e85b52;
+  transform: translateY(-3px);
 }
 
 /* Pag de contacto*/
@@ -180,6 +433,31 @@ footer {
   font-weight: lighter;
 }
 
+/* mq home */
+@media (min-width: 768px) {
+  /* Sección faq */
+  .faq .faq__item {
+    position: relative;
+  }
+  .faq .faq__item .faq__answer {
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+    z-index: 5;
+  }
+  .faq .faq__item:hover .faq__answer {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 /* mq para pag de contacto */
 @media (min-width: 1024px) {
   /* mapa de ubicación */
@@ -209,6 +487,9 @@ footer {
     align-items: flex-start;
     gap: 15px;
   }
+  .about .saludo h2 {
+    font-size: 45px;
+  }
   .about .saludo h2,
   .about .saludo p {
     text-align: left;
@@ -216,6 +497,48 @@ footer {
   .about .saludo p {
     font-size: 35px;
     font-weight: lighter;
+  }
+  .why h2 {
+    font-size: 30px;
+  }
+  .why p {
+    font-size: 25px;
+  }
+  .services-home .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+  .services-home .cards-container .card {
+    max-width: 400px;
+    height: 400px;
+  }
+  .services-home .cards-container .card .content {
+    padding: 18px 22px;
+  }
+  .services-home .cards-container .card .content h3 {
+    font-size: 1.3rem;
+  }
+  .services-home .cards-container .card .content p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  .services-home .cards-container .card button {
+    font-size: 1.05rem;
+    padding: 15px 22px;
+  }
+  .testimonios .testimonios-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cta .cta-content {
+    padding: 3rem 4rem;
+  }
+  .cta .cta-content .cta-text {
+    font-size: 1.2rem;
+    line-height: 1.9;
+  }
+  .cta .cta-content .cta-btn {
+    font-size: 1.4rem;
+    padding: 1rem 2.5rem;
   }
 }
 /* mq de pag contacto */

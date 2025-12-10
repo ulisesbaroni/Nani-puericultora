@@ -1,5 +1,6 @@
 /* mq home */
 @media (min-width: 768px) {
+  // Secciónes principales
   .about {
     display: flex;
     align-items: center;
@@ -17,13 +18,73 @@
       align-items: flex-start;
       gap: 15px;
 
+      h2 {
+        font-size: 45px;
+      }
+
       h2,
       p {
         text-align: left;
       }
-      p{
+      p {
         font-size: 35px;
         font-weight: lighter;
+      }
+    }
+  }
+  .why {
+    h2 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  // Sección servicios
+  .services-home {
+    .cards-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+
+      .card {
+        max-width: 400px;
+        height: 400px;
+
+        .content {
+          padding: 18px 22px;
+
+          h3 {
+            font-size: 1.3rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+            max-width: 90%;
+          }
+        }
+
+        button {
+          font-size: 1.05rem;
+          padding: 15px 22px;
+        }
+      }
+    }
+  }
+  // Sección Testimonios
+  .testimonios .testimonios-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  // Sección Consulta
+  .cta {
+    .cta-content {
+      padding: 3rem 4rem;
+      .cta-text {
+        font-size: 1.2rem;
+        line-height: 1.9;
+      }
+      .cta-btn {
+        font-size: 1.4rem;
+        padding: 1rem 2.5rem;
       }
     }
   }
