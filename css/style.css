@@ -159,6 +159,15 @@ footer {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+.services-home .cards-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 .services-home .cards-container .card .content {
   position: absolute;
   bottom: 0;
@@ -196,8 +205,8 @@ footer {
   font-weight: bold;
   opacity: 0;
   transition: 0.4s ease;
-  z-index: 2;
   font-size: 1rem;
+  z-index: 3;
 }
 .services-home .cards-container .card:hover .content {
   transform: translateY(-100px);
@@ -328,8 +337,9 @@ footer {
 }
 .cta-wrapper .cta .cta-content .cta-btn {
   display: inline-block;
-  background: #ff6f61;
-  color: #fff;
+  margin-top: 1.5rem;
+  border: 1.5px solid rgb(145, 100, 100);
+  color: rgb(145, 100, 100);
   font-family: "fontPrimary";
   font-size: 1.3rem;
   font-weight: bold;
@@ -339,7 +349,8 @@ footer {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .cta-wrapper .cta .cta-content .cta-btn:hover {
-  background: #e85b52;
+  background: #FFB6B9;
+  color: #f7f3e8;
   transform: translateY(-3px);
 }
 
@@ -438,12 +449,14 @@ footer {
   /* Sección faq */
   .faq .faq__item {
     position: relative;
+    padding-bottom: 2.2rem;
   }
   .faq .faq__item .faq__answer {
     position: absolute;
-    top: 2.2rem;
+    top: 1.5rem;
     left: 0;
     background: #fff;
+    font-weight: bold;
     padding: 1rem;
     border-radius: 10px;
     width: 100%;
@@ -505,7 +518,7 @@ footer {
     font-size: 25px;
   }
   .services-home .cards-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
   .services-home .cards-container .card {
@@ -520,7 +533,7 @@ footer {
   }
   .services-home .cards-container .card .content p {
     font-size: 1.1rem;
-    max-width: 90%;
+    max-width: 100%;
   }
   .services-home .cards-container .card button {
     font-size: 1.05rem;
