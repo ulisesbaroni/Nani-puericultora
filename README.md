@@ -48,7 +48,7 @@ El proyecto está diseñado con una estética suave y cercana, priorizando la ac
 
 ✔️ Proyecto activo y en desarrollo
 ✔️ Primera versión funcional publicada
-🔄 Mejoras pendientes: optimización de imágenes, agregar favicon, nuevas secciones
+🔄 Mejoras pendientes: optimización de imágenes, nuevas secciones.
 
 ## 🤝 Contribuciones
 
